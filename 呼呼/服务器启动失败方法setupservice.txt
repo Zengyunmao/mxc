@@ -1,0 +1,10 @@
+#方法一：
+sc create svnserve binpath= "F:/TortoiseSVN/bin/svnserve.exe --service -r F:/svnServer" depend= Tcpip start= auto
+sc start svnserve
+pause
+#将后缀改为.bat放到bin下启动
+#方法二（实测可靠）：
+#在doc命令栏下输入并回车即可C:\Documents and Settings\Administrator>svnserve -d --listen-port 3690 -r f:\svnServer
+#测试端口命令为netstat -ano
+#启动服务器仓库命令是svnserve -d -r 地址  而不是svnadmin   
+#svnadmin create 地址  是创建仓库
